@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fake News Detection</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div>
+	{% if prediction_MNB == ['fake']%}
+		<div style="text-align: center; padding-top: 5%; font-size: 36px;">
+			<h5>
+				Prediction through Multinomial Naive Bayes - Fake!
+			</h5>
+		</div>
+	{% elif prediction_MNB == ['true']%}
+		<div style="text-align: center; padding-top: 5%; font-size: 36px;">
+			<h5>
+				Prediction through Multinomial Naive Bayes - Real!
+			</p>
+		</div>
+	{% endif %}
+	{% if prediction_DT == ['fake']%}
+		<div style="text-align: center; padding-top: 5%; font-size: 36px;">
+			<h5>
+				Prediction through Decision Tree - Fake!
+			</h5>
+		</div>
+	{% elif prediction_DT == ['true']%}
+		<div style="text-align: center; padding-top: 5%; font-size: 36px;">
+			<h5>
+				Prediction through Decision Tree - Real!
+			</p>
+		</div>
+	{% endif %}
+	{% if prediction_RF == ['fake']%}
+		<div style="text-align: center; padding-top: 5%; font-size: 36px;">
+			<h5>
+				Prediction through Random Forest - Fake!
+			</h5>
+		</div>
+	{% elif prediction_RF == ['true']%}
+		<div style="text-align: center; padding-top: 5%; font-size: 36px;">
+			<h5>
+				Prediction through Random Forest - Real!
+			</p>
+		</div>
+	{% endif %}
+</div>
+</body>
+</html>
