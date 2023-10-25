@@ -2,7 +2,7 @@
 
 
 ## Data
-The Data is taken from Kaggle! 
+The Data is taken from Kaggle!  
 The link to the dataset is [Link](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
   
 ## Set Up 
